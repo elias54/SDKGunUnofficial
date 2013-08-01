@@ -96,7 +96,7 @@ public class SDK_GrapplingHook {
 		LanguageRegistry.addName(itemRope, "Rope");
 		GameRegistry.addRecipe(new ItemStack(itemGrapplingHook, 1), new Object[] {"X", "#", "#", '#', itemRope, 'X', Item.ingotIron});
 		GameRegistry.addRecipe(new ItemStack(itemRope, 1), new Object[]{"##", "##", "##", '#', Item.silk});
-		LanguageRegistry.instance().addStringLocalization("SDK_GP_TAB", "SDK - Grappling Hook Tab");
+		LanguageRegistry.instance().addStringLocalization("itemGroup.SDK_GP_TAB", "SDK - Grappling Hook Tab");
 	}
 	
 	
