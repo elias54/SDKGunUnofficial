@@ -10,6 +10,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
@@ -47,11 +48,14 @@ public class SDK_GrapplingHook {
 					  itemGrapplingHookID, 
 					  itemRopeID;
     
+	public static boolean modLoaded;
+	
 	public static final CreativeTabs sdk_grapplingHookTab = new CreativeTabs("SDK_GP_TAB");
 	
 	@Mod.EventHandler
 	public void preLoad(FMLPreInitializationEvent event)
 	{
+		modLoaded = false;
 		SDKGPLogger = event.getModLog();
 		SDKGPLogger.log(Level.INFO, "Loading all configs...");
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
@@ -99,5 +103,9 @@ public class SDK_GrapplingHook {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.SDK_GP_TAB", "SDK - Grappling Hook Tab");
 	}
 	
+	public static boolean isModLoaded(String s)
+	{
+		return Loader.isModLoaded(s);
+	}
 	
 }
