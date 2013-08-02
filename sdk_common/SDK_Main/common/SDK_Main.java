@@ -8,7 +8,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid = "sdk_analyzer", name = "SDK Analyzer", version = "N/A")
+@Mod(modid = "sdk_analyzer", name = "SDK Detector", version = "N/A")
 
 @SideOnly(Side.CLIENT)
 public class SDK_Main {

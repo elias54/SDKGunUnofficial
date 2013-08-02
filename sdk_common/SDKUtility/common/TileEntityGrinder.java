@@ -259,6 +259,7 @@ public class TileEntityGrinder extends TileEntity implements ISidedInventory
 
             if (flag != this.burnTime > 0)
             {
+            	isActive = true;
                 flag1 = true;
             }
         }

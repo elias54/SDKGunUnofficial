@@ -26,7 +26,7 @@ public class TickCommonHandler implements ITickHandler {
 		        {
 		            entityplayer.setInWeb();
 		            itemstack.damageItem(1, entityplayer);
-		            entityplayer.worldObj.playSoundAtEntity(entityplayer, "sdk.parachute", 0.5F, 1.0F / (random.nextFloat() * 0.1F + 0.95F));
+		            entityplayer.worldObj.playSoundAtEntity(entityplayer, "sdk_utility:parachute", 0.5F, 1.0F / (random.nextFloat() * 0.1F + 0.95F));
 		            EntityParachute parachute = new EntityParachute(entityplayer.worldObj, entityplayer);
 		            if (!entityplayer.worldObj.isRemote)
 		            {

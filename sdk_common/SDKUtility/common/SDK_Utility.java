@@ -3,6 +3,8 @@ package SDKUtility.common;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import SDKUtility.client.SDKU_EventSounds;
+
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
@@ -10,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
@@ -68,6 +71,12 @@ public class SDK_Utility
 	{
 		SDKU_Logger = getModLog(event);
 		SDKU_Logger.log(Level.INFO, "Loading Config manager...");
+		
+		if(event.getSide().isClient())
+		{
+			MinecraftForge.EVENT_BUS.register(new SDKU_EventSounds());
+		}
+		
 		Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
 		try {
 			cfg.load();
