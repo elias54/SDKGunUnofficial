@@ -5,7 +5,9 @@ import SDKUtility.common.SDKU_CommonProxy;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
+@SideOnly(Side.CLIENT)
 public class SDKU_ClientProxy extends SDKU_CommonProxy {
 
 	@Override

@@ -18,7 +18,10 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.TickType;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
+@SideOnly(Side.CLIENT)
 public class TickClientHandler implements ITickHandler {
 	
 	public static final ResourceLocation telescopeOverlay = new ResourceLocation("sdk_utility", "textures/blur/miscTelescope.png");
